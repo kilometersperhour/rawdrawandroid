@@ -7,10 +7,10 @@ all : makecapk.apk
 
 # WARNING WARNING WARNING!  YOU ABSOLUTELY MUST OVERRIDE THE PROJECT NAME
 # you should also override these parameters, get your own signatre file and make your own manifest.
-APPNAME?=cnfgtest
+APPNAME?=myycnfgtest
 LABEL?=$(APPNAME)
 APKFILE ?= $(APPNAME).apk
-PACKAGENAME?=org.yourorg.$(APPNAME)
+PACKAGENAME?=org.thisismyorg.$(APPNAME)
 RAWDRAWANDROID?=.
 RAWDRAWANDROIDSRCS=$(RAWDRAWANDROID)/android_native_app_glue.c
 SRC?=test.c
@@ -18,7 +18,7 @@ SRC?=test.c
 #We've tested it with android version 22, 24, 28, 29 and 30 and 32.
 #You can target something like Android 28, but if you set ANDROIDVERSION to say 22, then
 #Your app should (though not necessarily) support all the way back to Android 22. 
-ANDROIDVERSION?=30
+ANDROIDVERSION?=33
 ANDROIDTARGET?=$(ANDROIDVERSION)
 CFLAGS?=-ffunction-sections -Os -fdata-sections -Wall -fvisibility=hidden
 LDFLAGS?=-Wl,--gc-sections -Wl,-Map=output.map -s
